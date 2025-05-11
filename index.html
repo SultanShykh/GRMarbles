@@ -37,7 +37,7 @@
 		arial-label="Furni navigation bar">
 		<div class="container">
 			<a class="navbar-brand" href="index.html">
-				<img src="favicon/favicon.png" class="rounded" alt="Furni Logo"
+				<img src="favicon/favicon.webp" class="rounded" alt="Furni Logo"
 					style="height: 40px; margin-right: 8px;">
 			</a>
 
@@ -499,7 +499,7 @@
 				<div class="col-lg-4">
 					<div class="mb-4 footer-logo-wrap">
 						<a class="navbar-brand" href="index.html">
-							<img src="favicon/favicon.png" class="rounded" alt="StoneCraft Logo" style="height: 60px;">
+							<img src="favicon/favicon.webp" class="rounded" alt="StoneCraft Logo" style="height: 60px;">
 						</a>
 					</div>
 					<p class="mb-4">
@@ -564,12 +564,44 @@
 		</div>
 	</footer>
 	<!-- End Footer Section -->
-
+	<!-- Floating WhatsApp Button -->
+	<a href="https://wa.me/+923212019185" class="float-whatsapp" target="_blank">
+		<i class="fa fa-brands fa-whatsapp"></i>
+	</a>
 
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/tiny-slider.js"></script>
 	<script src="js/custom.js"></script>
-
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			var testimonialSlider = tns({
+				container: '#testimonialSlider',
+				items: 1,
+				slideBy: 1,
+				autoplay: true,
+				autoplayTimeout: 5000,
+				autoplayButtonOutput: false,
+				controls: true,
+				nav: false,
+				controlsContainer: '.testimonial-nav',
+				prevButton: '.prev',
+				nextButton: '.next',
+				loop: true,
+				mouseDrag: true,
+				swipeAngle: false,
+				speed: 700,
+				responsive: {
+					0: {
+						items: 1
+					},
+					768: {
+						items: 1
+					}
+				}
+			});
+		});
+	</script>
+	
 	<style>
 		.testimonial-slider-wrap {
 			position: relative;
@@ -676,42 +708,6 @@
 			opacity: 0;
 		}
 	</style>
-
-	<script>
-		document.addEventListener('DOMContentLoaded', function () {
-			var testimonialSlider = tns({
-				container: '#testimonialSlider',
-				items: 1,
-				slideBy: 1,
-				autoplay: true,
-				autoplayTimeout: 5000,
-				autoplayButtonOutput: false,
-				controls: true,
-				nav: false,
-				controlsContainer: '.testimonial-nav',
-				prevButton: '.prev',
-				nextButton: '.next',
-				loop: true,
-				mouseDrag: true,
-				swipeAngle: false,
-				speed: 700,
-				responsive: {
-					0: {
-						items: 1
-					},
-					768: {
-						items: 1
-					}
-				}
-			});
-		});
-	</script>
-
-	<!-- Floating WhatsApp Button -->
-	<a href="https://wa.me/+923212019185" class="float-whatsapp" target="_blank">
-		<i class="fa fa-brands fa-whatsapp"></i>
-	</a>
-
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
 			const heroImages = [
