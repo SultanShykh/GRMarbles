@@ -1,0 +1,135 @@
+/* Dropdown menu styles - complete fix */
+.custom-navbar .dropdown-menu {
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 2px solid #3b5d50;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  padding: 8px 4px;
+  margin-top: 10px;
+  z-index: 9999;
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+/* Show dropdown on hover with better visibility transition */
+
+
+/* Prevent click behavior */
+.custom-navbar .dropdown-toggle[aria-expanded="true"] + .dropdown-menu {
+  display: none !important;
+}
+
+/* Add pointer cursor to the dropdown toggle */
+.custom-navbar .dropdown-toggle {
+  cursor: pointer;
+}
+
+/* Dropdown items styling - with stronger overrides */
+.custom-navbar .dropdown-menu .dropdown-item,
+.custom-navbar .dropdown-menu li a.dropdown-item,
+.navbar-dark .navbar-nav .dropdown-menu .dropdown-item {
+  color: #3b5d50 !important;
+  font-weight: 800 !important;
+  font-size: 16px !important;
+  padding: 6px 10px !important;
+  opacity: 1 !important;
+  transition: all 0.3s ease;
+  display: block !important;
+  width: calc(100% - 2px) !important;
+  text-align: left !important;
+  border-bottom: none !important;
+  letter-spacing: 0.5px;
+  background-color: transparent !important;
+  position: relative;
+  border-radius: 10px !important;
+  margin: 2px 1px !important;
+}
+
+/* Add yellow line as bottom border instead of pseudo-element */
+.custom-navbar .dropdown-menu .dropdown-item:not(:last-child),
+.custom-navbar .dropdown-menu li a.dropdown-item:not(:last-child) {
+  border-bottom: 0.3px solid #f9bf29 !important;
+  margin-bottom: 2px !important;
+  padding-bottom: 2px !important;
+}
+
+/* Remove old border-bottom rules that might interfere */
+.custom-navbar .dropdown-item:last-child {
+  border-bottom: none !important;
+}
+
+.custom-navbar .dropdown-item:last-child::after {
+  display: none;
+}
+
+/* Very specific hover styles with !important */
+.custom-navbar .dropdown-menu .dropdown-item:hover, 
+.custom-navbar .dropdown-menu .dropdown-item:focus,
+.custom-navbar .dropdown-menu li a.dropdown-item:hover,
+.custom-navbar .dropdown-menu li a.dropdown-item:focus,
+.navbar-dark .navbar-nav .dropdown-menu .dropdown-item:hover,
+.navbar-dark .navbar-nav .dropdown-menu .dropdown-item:focus {
+  background-color: #3b5d50 !important;
+  color: #ffffff !important;
+  opacity: 1 !important;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.custom-navbar .dropdown-toggle::after {
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+/* Inline style override for text color to ensure visibility */
+.custom-navbar .dropdown .dropdown-menu li a {
+  color: #000000 !important;
+}
+
+.custom-navbar .nav-item.dropdown.active .dropdown-toggle {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Additional styles to ensure visibility */
+.dropdown-menu.show {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+} 
+
+/* For mobile devices, ensure the dropdown shows on hover */
+@media (max-width: 768px) {
+  .custom-navbar .nav-item.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+.carousel-item {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 80vh;
+  position: relative;
+}
+
+.carousel-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(59, 93, 80, 0.7); /* match existing bg */
+  z-index: 1;
+}
+
+.carousel-item .container {
+  position: relative;
+  z-index: 2;
+}
